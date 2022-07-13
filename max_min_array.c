@@ -15,22 +15,21 @@ void display(int *a,int n){
 void max_min(int *a,int n){
     int i=0,lg=0,sm;
     lg=*(a+i);
+    sm=*(a+i);
     while(i<n-1){
         if(lg<*(a+(i+1))){
             lg=*(a+(i+1));
         }
-        i++;
-    }
-    printf("\nLargest element is : %d",lg);
-    i=0;
-    sm=*(a+i);
-    while(i<n-1){
         if(sm>*(a+(i+1))){
             sm=*(a+(i+1));
         }
+    
         i++;
-    printf("\nSmallest element is : %d",sm);
     }
+    printf("\nLargest element is : %d",lg);
+    
+    printf("\nSmallest element is : %d",sm);
+    
 }
 
 void main()
